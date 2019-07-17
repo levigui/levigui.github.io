@@ -1,0 +1,32 @@
+body {
+    
+    color:  cornflowerblue;
+    background-color: azure;
+
+
+
+}
+
+img {
+
+    display: block;
+    margin: 0 auto;
+
+}
+
+
+
+
+#centro {
+
+    display: block;
+    font-size: 30px;
+    font-style: Andale Mono;
+    margin: 0 auto;
+    margin-top: 70px;
+    
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+ 
+}
