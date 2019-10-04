@@ -216,9 +216,9 @@ function movimentaMinhaRaquete(){
 }
 
 function mostraRaquetes(){
-fill("white");
+fill("lightblue");
 rect(xMinhaRaquete, yMinhaRaquete, larguraRaquete, alturaRaquete);
-fill("grey")
+fill("pink")
 rect(xRaqueteOponente, yRaqueteOponente, larguraRaquete, alturaRaquete);
 
 }
@@ -227,7 +227,7 @@ rect(xRaqueteOponente, yRaqueteOponente, larguraRaquete, alturaRaquete);
 
 
 function mostraBolinha(){
-  fill("red");
+  fill("lime");
   noStroke();
   circle(xBolinha, yBolinha, diametro);
  
