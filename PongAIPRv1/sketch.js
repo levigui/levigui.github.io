@@ -16,7 +16,7 @@ let velocidadeY = 10;
 let velocidadeRaquete = 15;
 
 
-//Variaveis em JS das raquetes/
+//Variaveis em JS das raquetes./
 let alturaRaquete = 110;
 let larguraRaquete = 10;
 
