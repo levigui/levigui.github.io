@@ -142,8 +142,8 @@ function mostraPlacar(){
  
     meuPlacar += 1;
       somPonto.play();
-    velocidadeX -= aumentoDeVelocidade;
-    velocidadeY -= aumentoDeVelocidade;
+    velocidadeX += aumentoDeVelocidade;
+    velocidadeY += aumentoDeVelocidade;
   }
 
 }
