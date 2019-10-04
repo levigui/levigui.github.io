@@ -134,8 +134,8 @@ function mostraPlacar(){
  
     placarOponente += 1;
     somPonto.play();
-    velocidadeX += aumentoDeVelocidade;
-    velocidadeY += aumentoDeVelocidade;
+    velocidadeX -= aumentoDeVelocidade;
+    velocidadeY -= aumentoDeVelocidade;
   }
  
     if (xBolinha - raio < 1){
