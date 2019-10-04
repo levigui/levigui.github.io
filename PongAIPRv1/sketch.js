@@ -124,8 +124,8 @@ function teclasVenceu(){
 }
 
 function mostraPlacar(){
-  fill("red")
-  stroke("white")
+  fill("white")
+  stroke("black")
   textSize(30);
   text(meuPlacar, 3/4 * larguraTela, 30);
   text(placarOponente, larguraTela/4, 30);
