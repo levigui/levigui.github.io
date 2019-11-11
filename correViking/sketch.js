@@ -112,7 +112,7 @@ function draw() {
   
       
   
-  if(vivo){
+  if(vivo == 0){
     
   
     
