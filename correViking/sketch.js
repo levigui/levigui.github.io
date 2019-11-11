@@ -4,7 +4,7 @@ let yViking = 300;
 let teto = 0;
 let fundo;
 let vilao = 0;
-let velocidadeCarro1 = 8;
+let velocidadeflecha = 8;
 let xFlecha = 0;
 let yFlecha = 300;
 let flecha1;
@@ -12,20 +12,21 @@ let flecha2;
 let flecha3;
 let flecha4;
 let flecha5;
+let tamanhoFlecha = 50;
 let meuPlacar = 0;
 let vivo = 0;
-let tamanhoFlecha = 50;
+let lFlecha = 45;
+let aFlecha = 10 ;
 let tamanhoShuriken = 40;
-let lViking = 0;
+let lViking = 25;
 let aViking = 40;
-let pato;
+let gameOver;
 let cena;
 let play = 0 ;
 let trilha;
 let pulo;
 let vidas = 30;
-let co;
-let hit;
+let coracoes;
 let xFundo = 0;
 let yFundo = 0;
 let senai;
@@ -38,13 +39,12 @@ function preload() {
   flecha3 = loadImage('imagensFlecha/flechaLVL3.png');    
   flecha4 = loadImage('imagensFlecha/flechaLVL5.png');    
   flecha5 = loadImage('imagensFlecha/flechaNinja.png');
-  pato = loadImage('imagens/gameOver.png');
+  gameOver = loadImage('imagens/gameOver.png');
   cena = loadImage('imagens/cenario.jpg');
   trilha = loadSound('sons/trilha.mp3');
   pulo = loadSound('sons/salto.wav');
   skyrim = loadSound('sons/sk.mp3');
-    co = loadImage('imagens/co.png');
-  hit = loadSound('sons/morte.wav');
+    coracoes = loadImage('imagens/co.png');
    senai = loadImage('imagens/indice.png');
   
   
@@ -112,7 +112,10 @@ function draw() {
   
       
   
-  if(vivo == 0){
+  if(vivo){
+    
+  
+    
   background(0);
   image(fundo,xFundo,yFundo, 1920, 500)
   movimentaFundo()
@@ -127,9 +130,7 @@ function draw() {
   aumentoDeVelocidae();
   movimentaInimigo();
   mostraVidas();
-  animation(viking, xViking, yViking);
- 
-  
+  animation(viking, xViking, yViking); 
   }
   
   if(vivo ==  1)    
@@ -137,7 +138,7 @@ function draw() {
   
    
      
-     image(pato,125,10,350,250);
+     image(gameOver,125,10,350,250);
   
    
    fill("WHITE");
@@ -187,13 +188,13 @@ function movimentaFundo(){
    function mostraVidas(){
      
      if(vidas >= 10)
-        {image(co,15,10,40,40);}
+        {image(coracoes,15,10,40,40);}
      
      if(vidas >= 20){
-    image(co,55,10,40,40);}
+    image(coracoes,55,10,40,40);}
 
       if(vidas >= 30){
-     image(co,95,10,40,40);}
+     image(coracoes,95,10,40,40);}
    
    
    
@@ -222,10 +223,9 @@ function somDeFundo(){
 
 function colide(){
   
- if(collideRectRect(xFlecha, yFlecha, tamanhoFlecha, tamanhoFlecha, xViking, yViking, lViking, aViking )){
+ if(collideRectRect(xFlecha, yFlecha, lFlecha, aFlecha, xViking, yViking, lViking, aViking )){
            
        
-  
      vidas -= 1;
    
    
@@ -251,23 +251,23 @@ function colide(){
     
     
           if(meuPlacar == 500){
-                velocidadeCarro1 += 2;
+                velocidadeflecha += 2;
           }
     
       
        if(meuPlacar == 1000){
-                velocidadeCarro1 += 5;
+                velocidadeflecha += 5;
           }
       
       
        if(meuPlacar == 3500){
-                velocidadeCarro1 += 7;
+                velocidadeflecha += 7;
           }
       
       
       
              if(meuPlacar == 5000){
-                velocidadeCarro1 += 10;
+                velocidadeflecha += 10;
           }
       
       
@@ -331,7 +331,7 @@ function mostraPlacar(){
 function movimentaInimigo(){
   
 
- xFlecha -= velocidadeCarro1;
+ xFlecha -= velocidadeflecha;
 
 }
 
@@ -394,9 +394,9 @@ function chao(){
 
 function queda(){
 
-  if(teto == 1){
-    
-    yViking += 5;
+  if(teto){
+    for (let i = 0; i < 0.3; i++) 
+    {yViking += 5;}
   }
   
 }
@@ -412,12 +412,13 @@ function ar(){
 
 function pula(){
   
-  if(teto == 0){
+  if(teto  == false){
   
   if(keyIsDown(32) || keyIsDown(UP_ARROW)){
     
     pulo.play();
-    yViking -= 130;
+    for (let i = 0; i < 16; i++)
+    {yViking -= i;}
 
   
   }}

@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     	<style type="text/css">
-    		p{ color: black ; }
+    		p{ color: black; }
 
     		h1{ margin-top: 250px;
     			margin-left: 250px ;
@@ -16,14 +16,13 @@
 
 
 
-
     	</style>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Corre Viking Docs!</title>
   </head>
-  <body class="bg-white text-center">
+  <body class="text-center">
 
 
   		<div class="bg-secundary">
@@ -49,6 +48,9 @@
 
     							<p class="text-justify mr-5 ml-5"> O salto do Personagem é limitado por uma determinada cordenada a qual o Personagem não pode passar, ao chegar em tal cordenada o Personagem volta aos poucos para a posição inicial dando ideia de Movimento de Queda, Tudo atravez de cordenadas no plano carteziano</p>
                                 <img class=" mt-2 mb-2" src="imagensHtml/chão.PNG">  <img class=" mt-2 mb-2" src="imagensHtml/ar.PNG"> 
+                                <div class="text-center"><img class=" mt-2 mb-2" src="imagensHtml/puloViking.PNG"></div>
+
+
 
 
     							</div>
@@ -70,8 +72,13 @@
     							<p class="text-justify mr-5 ml-5">Há ao todo uma variedade de 5 inimigos diferentes 
     							que são escolhidos por uma variável aleatória que define qual
     							sera a imagem a aparecer antes da Movimentação </p>
+                 <img class=" mt-2 mb-2" src="imagensHtml/flecha teto.PNG"> <img class=" mt-2 mb-2" src="imagensHtml/movimento inimigo.PNG">
 
-                                    <img class=" mt-2 mb-2" src="imagensHtml/flecha teto.PNG"> <img class=" mt-2 mb-2" src="imagensHtml/movimento inimigo.PNG">
+                 <div><img class=" m-5" src="imagensHtml/flecha.png" width="70px">
+                 	<img class=" m-5" src="imagensHtml/flecha2.png" width="70px">
+                 	<img class=" m-5" src="imagensHtml/flecha3.png" width="70px">
+                 	<img class=" m-5" src="imagensHtml/flecha5.png" width="70px">
+                 	<img class=" m-5 " src="imagensHtml/flechaNinja.png" width="50px"></div>
 
     							</div>
 
@@ -95,6 +102,9 @@
     	<p class="text-justify mr-5 ml-5" >Para fazer animação do personagem é um processo muito simples, basta fazer um PreLoad com todas as imagens que irão animar o seu personagem, como se fosse uma imagem normal. Para isso foi utilizado uma Biblioteca JS chamada 	<em>p5.play.js</em>
     	</p>
         <img class=" mt-2 mb-2" src="imagensHtml/animação.PNG"> 
+        <div><img class=" mt-2 mb-2" src="imagensHtml/run1.png">
+        <img class=" mt-2 mb-2" src="imagensHtml/run2.png">
+    <img class=" mt-2 mb-2" src="imagensHtml/run3.png"></div>
     	</div>
 
     <div class="w-100"></div>
@@ -124,21 +134,16 @@
 
 <p class="text-center mr-5 ml-5"> A colisão com as flechas acontece através da biblioteca JavaScript p5.collide.js </p>
     <img class=" mt-2 mb-2" src="imagensHtml/colide.PNG"> 
- 
+ <div class="m-5"><img class=" mt-2 mb-2" src="imagensHtml/colidindo.png"></div>
 
  <div class="col-md-auto">
  <h2 class="text-center "> Vidas e fim de Jogo</h2>
-   						</div>	
-
-
-    									
-
-
-    								
+   						</div>	  									   								
   <div>
     <div >
         <p class="text-center mr-5 ml-5">Toda vez que há uma colisão  a variável "vivo"  chega a zero assim levando a tela de fim de jogo</p>
             <img class=" mt-2 mb-2" src="imagensHtml/tela final.PNG">
+            <img class=" m-5" src="imagensHtml/telaFim.png">
 
     </div>
 
@@ -146,16 +151,11 @@
     <div >
     <p class="text-justify mr-5 ml-5">Porém o evento de colisão so pode zerar a variavel "vivo"  caso a variavel "vida" sendo menor que 1. Cada colisão subtrai 10 da variavel "vida" sendo a mesma com um valor inicial de 30 </p>
             <img class=" mt-2 mb-2" src="imagensHtml/vidas.PNG">
+            <img class=" m-5" src="imagensHtml/coracao.png">
     </div>
     
   </div>
-
-
-
-
-    									
-
-    								</div>
+	</div>
 
 
 
